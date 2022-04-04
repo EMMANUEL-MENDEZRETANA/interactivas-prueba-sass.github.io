@@ -1,0 +1,27 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Raleway&display=swap');
+
+$colors: (
+	'primary': #000000,
+	'secondary': #9E7474,
+    'additional': #D85A5A,
+    'light': #FFFFFF,
+);
+
+$fonts: (
+	'primary': 'Poppins',
+	'secondary': 'Raleway',
+);
+
+$font-weights: (
+	'regular': 400,
+	'medium': 500,
+	'bold': 700,
+);
+
+$font-sizes: (
+	'small': .9rem,
+	'normal': 1.8rem,
+	'big': 2.5rem,
+);
+

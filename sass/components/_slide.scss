@@ -1,0 +1,50 @@
+@use '../abstracts/variables';
+
+.slide {
+	width: 80%;
+	background-color: map-get(variables.$colors, 'light');
+	display: grid;
+    grid-template-columns: auto 1fr 1.4fr;
+	gap: 1em;
+	margin: 3em auto 0;
+	
+	&::before {
+		content: '';
+        height: 12em;
+		border-left: 8px solid map-get(variables.$colors, 'additional');
+        margin-top: 5em;
+	}
+	
+	div {
+		h1 {
+			margin-bottom: 1.5em;
+		}
+	
+		p {
+			span {
+				color: map-get(variables.$colors, 'primary');
+				font-weight: map-get(variables.$font-weights, 'bold');
+			}
+		}
+	
+		.button {
+			margin: 2em 1em 2em 0;
+		}
+		
+		div {
+			.slide__arrow {
+				width: 22%;
+				position: absolute;
+				top: 90%;
+				left: 15%;
+			}
+		}
+
+		.button--buy {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+		}
+	}
+}

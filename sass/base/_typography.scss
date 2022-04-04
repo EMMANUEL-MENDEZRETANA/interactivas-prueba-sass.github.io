@@ -1,0 +1,22 @@
+@use '../abstracts/mixins';
+
+h1 {
+    @include mixins.set-typography('primary', 'bold', 'normal');
+    @include mixins.set-color('primary');
+}
+
+h2 {
+    @include mixins.set-typography('primary', 'bold', 'big');
+    @include mixins.set-color('primary');
+}
+
+h3 {
+    @include mixins.set-typography('primary', 'medium', 'normal');
+    @include mixins.set-color('primary');
+}
+
+p {
+    @include mixins.set-typography('secondary', 'regular', 'small');
+    @include mixins.set-color('secondary');
+    line-height: 2rem;
+}

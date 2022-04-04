@@ -1,0 +1,31 @@
+@use './variables';
+
+@mixin set-color($color) {
+    color: map-get(variables.$colors, $color);
+}
+
+@mixin set-background-color($color) {
+    background-color: map-get(variables.$colors, $color);
+}
+
+@mixin set-typography($family, $weight, $size) {
+    font-family: map-get(variables.$fonts, $family);
+    font-weight: map-get(variables.$font-weights, $weight);
+    font-size: map-get(variables.$font-sizes, $size);
+    margin: 0;
+}
+
+@mixin get-button-color($color) {
+    @if $color == 'normal' {
+        @include set-background-color('additional');
+        @include set-color('light');
+    }
+    @else if $color == 'light' {
+        @include set-background-color('light');
+        @include set-color('additional');
+    }
+    @else if $color == 'dark' {
+        @include set-background-color('primary');
+        @include set-color('light');
+    }
+}

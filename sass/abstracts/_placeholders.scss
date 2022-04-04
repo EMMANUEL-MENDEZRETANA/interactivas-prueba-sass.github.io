@@ -1,0 +1,10 @@
+@use './mixins';
+
+%button {
+    @include mixins.set-typography('secondary', 'medium', 'small');
+    display: inline-block;
+    border: none;
+    text-align: center;
+    box-shadow: 2px 5px 7px #00000029;
+    transition: background-color 0.5s linear, color 0.5s linear;
+}
