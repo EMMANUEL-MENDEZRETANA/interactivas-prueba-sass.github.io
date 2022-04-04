@@ -10,9 +10,9 @@
 	
 	&::before {
 		content: '';
-        height: 12em;
+        height: 13.5em;
 		border-left: 8px solid map-get(variables.$colors, 'additional');
-        margin-top: 5em;
+        margin-top: 6em;
 	}
 	
 	div {
