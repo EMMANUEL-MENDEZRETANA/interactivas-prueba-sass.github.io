@@ -4,9 +4,8 @@
 .button {
     @extend %button;
     @include mixins.get-button-color('normal');
-    width: 12vw;
     border-radius: 2em;
-    padding: 1.2em 0;
+    padding: 1em 2em;
     
     &:hover {
         @include mixins.get-button-color('dark');
@@ -18,7 +17,7 @@
     
     &--buy {
         @include mixins.get-button-color('dark');
-        width: 2vw;
+        width: 1.5em;
         border-radius: 1em 1em 80% 1.5em;
         padding: 1.5em 1em;
         
