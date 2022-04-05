@@ -51,10 +51,10 @@
 @include mixins.media('small') {
 	.slide {
 		grid-template-columns: auto 1fr;
+		text-align: center;
 
 		&::before {
 			height: 18em;
-			grid-row: span 2;
 			margin-top: 5em;
 		}
 
@@ -69,14 +69,15 @@
 		}
 
 		.slide__arrow {
-			width: 30%;
-			transform: rotate(90deg);
-			top: 50%;
-			left: 65%;
+			width: 35%;
+			transform: translateX(-50%) rotate(90deg);
+			top: 165%;
+			left: 50%;
 		}
 
-		div:first-child {
-			margin-bottom: 2.5em;
+		div:nth-child(2) {
+			grid-column: span 2;
+			margin-top: 6em;
 		}
 	}
 }
