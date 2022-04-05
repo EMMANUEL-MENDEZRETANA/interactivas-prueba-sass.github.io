@@ -1,50 +1,82 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .slide {
 	width: 80%;
 	background-color: map-get(variables.$colors, 'light');
 	display: grid;
-    grid-template-columns: auto 1fr 1.5fr;
+	grid-template-columns: auto 1fr 1.5fr;
 	gap: 1em;
-	margin: 3em auto 0;
-	
+	margin: 3em auto 2em;
+
 	&::before {
 		content: '';
-        height: 13.5em;
+		height: 13.5em;
 		border-left: 8px solid map-get(variables.$colors, 'additional');
-        margin-top: 6em;
+		margin-top: 6em;
 	}
-	
-	div {
-		h1 {
-			margin-bottom: 1.5em;
+
+	h1 {
+		margin-bottom: 1.5em;
+	}
+
+	p {
+		span {
+			color: map-get(variables.$colors, 'primary');
+			font-weight: map-get(variables.$font-weights, 'bold');
 		}
-	
-		p {
-			span {
-				color: map-get(variables.$colors, 'primary');
-				font-weight: map-get(variables.$font-weights, 'bold');
-			}
-		}
-	
-		.button {
-			margin: 2em 1em 2em 0;
-		}
-		
-		div {
-			.slide__arrow {
-				width: 22%;
-				position: absolute;
-				top: 90%;
-				left: 20%;
-			}
+	}
+
+	.slide__container-buttons {
+		display: flex;
+		gap: 1em;
+		margin: 2em 0;
+	}
+
+	.slide__arrow {
+		width: 22%;
+		position: absolute;
+		top: 90%;
+		left: 20%;
+	}
+
+	.button--buy {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+	}
+}
+
+@include mixins.media('small') {
+	.slide {
+		grid-template-columns: auto 1fr;
+
+		&::before {
+			height: 18em;
+			grid-row: span 2;
+			margin-top: 5em;
 		}
 
-		.button--buy {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
+		h1 {
+			margin-bottom: 1em;
+		}
+
+		.slide__container-buttons {
+			flex-direction: column;
+			gap: 2em;
+			margin: 2em 1em;
+		}
+
+		.slide__arrow {
+			width: 30%;
+			transform: rotate(90deg);
+			top: 50%;
+			left: 65%;
+		}
+
+		div:first-child {
+			margin-bottom: 2.5em;
 		}
 	}
 }

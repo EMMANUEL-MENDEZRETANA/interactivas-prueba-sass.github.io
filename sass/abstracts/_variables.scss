@@ -3,9 +3,9 @@
 
 $colors: (
 	'primary': #000000,
-	'secondary': #9E7474,
-    'additional': #D85A5A,
-    'light': #FFFFFF,
+	'secondary': #9e7474,
+	'additional': #d85a5a,
+	'light': #ffffff,
 );
 
 $fonts: (
@@ -25,3 +25,8 @@ $font-sizes: (
 	'big': 3rem,
 );
 
+$breakpoints: (
+	'small': 768px,
+	'medium': 992px,
+	'large': 1200px,
+);
